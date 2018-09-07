@@ -3,7 +3,6 @@ from model import load_model
 import base64
 import cv2
 import math
-import pandas as pd
 
 
 def get_model_api():
@@ -58,8 +57,6 @@ def get_model_api():
         img_resized = img
 
         x = img_resized.flatten() / 255.0
-
-        pd.DataFrame(x).to_csv('number.csv', index=False)
 
         x = x.reshape((1, len(x)))
         prediction = model.predict_classes(x)
