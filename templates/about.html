@@ -9,7 +9,7 @@
     <meta name="description" content="Machine Learning Application: Use of Neural Networks to predict a digit based on users' drawings.">
     <meta name="author" content="Luis A. Denis Miranda">
 
-    <title>Digit Recognizer</title>
+    <title>Digit Recognizer - About</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="static/css/bootstrap.min.css" rel="stylesheet">
@@ -19,10 +19,6 @@
     body {
         padding-top: 70px;
         /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-    }
-
-    canvas {
-        border: 1px solid black;
     }
     </style>
 
@@ -60,20 +56,32 @@
     <div class="container">
 
         <div class="row">
-            <div class="col-lg-12 text-center">
+            <div class="col-lg-12 text-left">
                 <h1>Digit Recognizer</h1>
                 <hr>
-                <p class="lead">An application to showcase the power of Machine Learning.</p>
-                <p class="lead">Draw a digit in the canvas.</p>
-                <canvas id="drawing_canvas", width="280", height="280"></canvas>
-                <div>
-                    <button type="button" class="btn btn-primary" id="prediction_btn">Identify</button>
-                    <button type="button" class="btn btn-warning" id="clear_btn">Clear</button>
-                </div>
+                <p class="lead">This website was develop by Luis A. Denis Miranda. I am an informatics engineer currently
+                    working at the Technological University of Havana.</p>
+                <p class="lead">I am an avid reader and an AI enthusiast. This project was design to showcase the potential
+                    applications of the latest techniques in Machine Learning. In this case, a neural network was trained to
+                    identify digits drawn by people. I employed the famous MNIST data used by Kaggle in the introductory
+                    computer vision competition.</p>
+                <br>
+                <h2>How does it work?</h2>
                 <hr>
-                <p class="lead">Digit:</p>
-                <h2 id="prediction_output"></h2>
-                
+                <p class="lead">When the user draws an digit in the canvas and click in the identify button, the image is send
+                    to the server to process. First, all the unnecessary white space which is around the digit is deleted. Then,
+                    the image is treated to fit in a 28x28 frame. This resulting image is fed into the trained neural network
+                    and its output is shown to the user.</p>
+                <br>
+                <h2>Contact me</h2>
+                <hr>
+                <p class="lead">If you have any thoughts or doubts about the application, do not hesitate and contact me. I would
+                    be happy to chat. You can found me on <a href="https://www.facebook.com/ladm2110">Facebook</a>,
+                    <a href="https://www.linkedin.com/in/luis-alberto-denis-miranda-992840149/">LinkedIn</a> or you can email me to
+                    <b>ladm2110@gmail.com</b>.</p>
+
+
+
             </div>
         </div>
         <!-- /.row -->
@@ -81,15 +89,13 @@
     </div>
     <!-- /.container -->
 
+
+
     <!-- jQuery Version 1.11.1 -->
     <script src="static/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="static/js/bootstrap.min.js"></script>
-
-    <script src="static/js/main.js"></script>
-
-    <script src="static/js/drawing.js"></script>
 
 </body>
 
